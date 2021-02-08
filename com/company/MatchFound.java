@@ -1,3 +1,5 @@
+/*this program help to see a certain word is present in the provided paragraph or not*/
+
 package com.company;
 
 import java.util.Scanner;
