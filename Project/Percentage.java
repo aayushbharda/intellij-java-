@@ -1,4 +1,12 @@
-package com.company;
+/*this program calculate the percentage of any number of subject
+                 -any max mark
+                first input is no of subject
+                second  max mark of a subject
+                third input you will provide marks of each subject
+                input the marks of all subject = no of subject
+                */
+
+package Project;
 
 import java.util.Scanner;
 import java.lang.System;

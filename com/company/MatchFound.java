@@ -1,4 +1,6 @@
-/*this program help to see a certain word is present in the provided paragraph or not*/
+/*this program help to see a certain word is present in the provided paragraph or not
+      ---  first input consist of word or paragraph you want to search
+      ---   second input- copy and paste the paragraph*/
 
 package com.company;
 
