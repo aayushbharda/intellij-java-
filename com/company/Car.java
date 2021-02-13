@@ -33,8 +33,8 @@ public class Car {
     }
 
     public void upgradeMinSpeed(){
-        minSpeed=maxSpeed;
-        maxSpeed=maxSpeed+1;
+        minSpeed = maxSpeed;
+        maxSpeed = maxSpeed+ 1;
 
     }
 
@@ -43,7 +43,7 @@ public class Car {
              numberOfPeopleInCar++;
     }
     public void getOut(){
-            if (numberOfPeopleInCar>0) {
+            if (this.numberOfPeopleInCar>0) {
                 numberOfPeopleInCar--;
 
             }
@@ -52,12 +52,12 @@ public class Car {
 
     public double maxMilePerFull() {
 
-             return maxFuel*mpg;
+             return this.maxFuel*mpg;
     }
 
         public double runningOutOfGas(){
 
-             return currentFuel*mpg;
+             return this.currentFuel*mpg;
         }
         public void turnOn(){
             if (!isTheCarOn){
