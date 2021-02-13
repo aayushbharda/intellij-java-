@@ -2,10 +2,12 @@
 
 package Project;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Random;
 import java.util.Scanner;
 
-import static java.lang.System.nanoTime;
+
 
 class A{
 
@@ -133,26 +135,28 @@ public class KeyCreator {
 
 
     public static void main(String[] args) {
-        long startTime = nanoTime();{
+        long start = System.currentTimeMillis();
+        {
 
-        System.out.print("Using Space In Between Enter Three 4-digit Number:");
+            System.out.print("Using Space In Between Enter Three 4-digit Number:");
 
-        Random random=new Random();
+            Random random = new Random();
 
-        Compare ob=new Compare();
+            Compare ob = new Compare();
 
-        int i= ob.ones();
-        int j= ob.tens();
-        int k= ob.hund();
-        int l= ob.thou();
-        int m= random.nextInt(9);
+            int i = ob.ones();
+            int j = ob.tens();
+            int k = ob.hund();
+            int l = ob.thou();
+            int m = random.nextInt(9);
 
-        System.out.printf("The Generated Key is %d%d%d%d%d",l,k,j,i,m);
-        System.out.println();
+            System.out.printf("The Generated Key is %d%d%d%d%d", l, k, j, i, m);
+            System.out.println();
         }
-        long endTime   = nanoTime();
-        long totalTime = endTime - startTime;
-        System.out.println(totalTime);
+        long end = System.currentTimeMillis();
+
+        NumberFormat formatter = new DecimalFormat("#0.00000");
+        System.out.print("Execution time is " + formatter.format((end - start) / 1000d) + " seconds");
     }
 
 }
