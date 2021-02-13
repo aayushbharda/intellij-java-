@@ -5,6 +5,8 @@ package Project;
 import java.util.Random;
 import java.util.Scanner;
 
+import static java.lang.System.nanoTime;
+
 class A{
 
     int a = KeyCreator.sc.nextInt();
@@ -131,6 +133,8 @@ public class KeyCreator {
 
 
     public static void main(String[] args) {
+        long startTime = nanoTime();{
+
         System.out.print("Using Space In Between Enter Three 4-digit Number:");
 
         Random random=new Random();
@@ -144,7 +148,11 @@ public class KeyCreator {
         int m= random.nextInt(9);
 
         System.out.printf("The Generated Key is %d%d%d%d%d",l,k,j,i,m);
-
+        System.out.println();
+        }
+        long endTime   = nanoTime();
+        long totalTime = endTime - startTime;
+        System.out.println(totalTime);
     }
 
 }
