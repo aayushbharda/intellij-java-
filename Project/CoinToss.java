@@ -1,8 +1,10 @@
 package Project;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class CoinToss {
+    Scanner sc =new Scanner(System.in);
 
     public String tossACoin(){
         Random ran=new Random();
@@ -16,9 +18,13 @@ public class CoinToss {
     public static void main(String [] args){
         CoinToss game=new CoinToss();
 
-        for(int i=0;i<7;i++){
-            System.out.println(game.tossACoin());
-        }
-
+        System.out.println("How Many Time You Want to Flip the Coin :");
+        int a = game.sc.nextInt();
+       if(a>0) {
+           for (int i = 0; i < a; i++) {
+               System.out.println(game.tossACoin());
+           }
+       }
+       else System.out.println("Wrong Input!");
     }
 }
