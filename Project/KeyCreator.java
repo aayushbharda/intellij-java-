@@ -156,7 +156,7 @@ public class KeyCreator {
         long end = System.currentTimeMillis();
 
         NumberFormat formatter = new DecimalFormat("#0.00000");
-        System.out.print("Execution time is " + formatter.format((end - start) / 1000d) + " seconds");
+        System.out.print("Execution time is " + formatter.format((end - start) / 1000d) + " milli-seconds");
     }
 
 }
