@@ -5,7 +5,7 @@ public class Car {
          int      maxSpeed;
          int      minSpeed = 0;
 
-         double   weight   = 3500;
+         double   weight;
 
          boolean  isTheCarOn;
          char     condition = 'A';
@@ -46,7 +46,7 @@ public class Car {
     }
 
     public double maxMilePerFull() {
-           return currentFuel*mpg;
+           return maxFuel*mpg;
     }
 
         public double runningOutOfGas(){
@@ -57,7 +57,13 @@ public class Car {
 
             Car  gift= new Car(500,5000.55,true);
             gift.printVariable();
-
+              gift.getIn();
+              gift.getIn();
+              gift.getIn();
+            System.out.println(gift.maxMilePerFull());
+            System.out.println(gift.runningOutOfGas());
+            gift.getOut();
+            gift.upgradeMinSpeed();
 
     }
 }
