@@ -5,7 +5,7 @@ public class Car {
          int      maxSpeed;
          int      minSpeed = 0;
 
-         double   weight;
+         double   weight   ;
 
          boolean  isTheCarOn;
          char     condition = 'A';
@@ -15,7 +15,7 @@ public class Car {
          double currentFuel=8;
          double mpg=26.4;
 
-         int numberOfPeopleInCar=1;
+         int numberOfPeopleInCar=6;
 
          public Car(int customMaxSpeed,double customWeight,boolean customIsTheCarOn){
                        maxSpeed = customMaxSpeed;
@@ -39,18 +39,32 @@ public class Car {
     }
 
     public void getIn(){
+
              numberOfPeopleInCar++;
     }
     public void getOut(){
-             numberOfPeopleInCar--;
-    }
+            if (numberOfPeopleInCar>0) {
+                numberOfPeopleInCar--;
+
+            }
+            else System.out.println(numberOfPeopleInCar);
+         }
 
     public double maxMilePerFull() {
-           return maxFuel*mpg;
+
+             return maxFuel*mpg;
     }
 
         public double runningOutOfGas(){
-            return currentFuel*mpg;
+
+             return currentFuel*mpg;
+        }
+        public void turnOn(){
+            if (!isTheCarOn){
+                isTheCarOn=true;
+            }
+
+
         }
         public static void main(String[] args) {
 
@@ -64,6 +78,6 @@ public class Car {
             System.out.println(gift.runningOutOfGas());
             gift.getOut();
             gift.upgradeMinSpeed();
-
+                gift.turnOn();
     }
 }
