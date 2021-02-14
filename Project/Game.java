@@ -24,10 +24,10 @@ public class Game {
 
                  if (u == 0 && c == 2 || u == 1 && c == 0 || u == 2 && c == 1) {
                      System.out.println("You Win!");
-                 } else if (u == 0 && c == 1 || u == 1 && c == 2 || u == 2 && c == 0) {
-                     System.out.println("You Lose!");
-                 } else {
+                 } else if (u == c) {
                      System.out.println("Tie!");
+                 } else {
+                     System.out.println("You Lose!");
                  }
              } else {
                  System.out.println("Wrong Input!enter number 0,1 or 2");

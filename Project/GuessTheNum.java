@@ -11,6 +11,7 @@ public class GuessTheNum {
     int theNumber;
     int max;
     Scanner sc =new Scanner(System.in);
+
     public GuessTheNum(){
         Random rand=new Random();
         max=100;
