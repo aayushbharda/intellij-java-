@@ -12,8 +12,8 @@ public class MadLibs {
     String noun1;
     String noun2;
     String noun3;
-    String  adverb;
-    String  randomNum;
+    String adverb;
+    String randomNum;
      Random rand=new Random();
 
 //     getters!
@@ -59,17 +59,21 @@ public class MadLibs {
 //    Setter
 
     public void setStory(String newStory){
-       this.story=newStory;
+
+        this.story=newStory;
     }
 
     public void setName(String newName){
+
         this.name=newName;
     }
     public void setAdjective1(String newAdjective1){
+
         this.adjective1=newAdjective1;
     }
 
     public void setAdjective2(String newAdjective2){
+
         this.adjective2=newAdjective2;
     }
 
@@ -100,7 +104,7 @@ public class MadLibs {
                 numberHolder[index]=num+index;
                 index++;
             }
-          randomNum="not"+numberHolder[0]+", not"+numberHolder[1]+", but"+numberHolder[2];
+          randomNum="not "+numberHolder[0]+", not "+numberHolder[1]+", but "+numberHolder[2];
     }
     //print instructions.
 
@@ -145,22 +149,22 @@ System.out.println("give me a another noun");
       String story;
       int num=Math.abs(rand.nextInt())%2;
       if (num==0) {
-          story = "jesse and her best friend " + getName() + "went to disney world today!" +
-                  "they saw" + getNoun1() + "in a show at magic kingdom and ate a " +
-                  getAdjective1() + "feast for dinner .The next day she ran " + getAdverb() +
-                  "to meet Mickey Mouse in his" + getNoun2() + " and then that night gazed" +
-                  "at the " + getRandomNum() + " " + getAdjective2() + "fireworks shooting from the" +
+          story = "jesse and her best friend " + getName() + " went to disney world today!\n" +
+                  "they saw " + getNoun1() + " in a show at magic kingdom and ate a " +
+                  getAdjective1() + " feast for dinner\n .The next day she ran " + getAdverb() +
+                  " to meet Mickey Mouse in his " + getNoun2() + " \nand then that night gazed " +
+                  "at the " + getRandomNum() + " " + getAdjective2() + "\nfireworks shooting from the " +
                   getNoun3() + ".";
       }
       else{
-          story="addy and her best friend " + getName() + "went to the zoo world last summer!" +
-                  "they saw a huge" + getNoun1() + "and a tiny little" +getNoun2()+
+          story="addy and her best friend " + getName() + " went to the zoo world last summer!\n " +
+                  "they saw a huge " + getNoun1() + " and a tiny little \n" +getNoun2()+
                    "That night they decided to climb " + getAdverb() +
-                  "into the" + getNoun3() + " to get a look." +
-                  "the zoo was" + getAdjective1() + "at night ,but they didn't" +
+                  " into the " + getNoun3() + " to get a look.\n" +
+                  "the zoo was " + getAdjective1() + " at night ,but they didn't " +
                   " care...until "+getRandomNum()+" " + getAdjective2() +
-                  "apes yelled on their faces, making addy and " +
-                  getName() + "sprint all the way back home.";
+                  "apes yelled \non their faces, making addy and " +
+                  getName() + " sprint all the way back home.";
       }
         setStory(story);
 
